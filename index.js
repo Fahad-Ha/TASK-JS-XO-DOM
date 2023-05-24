@@ -1,21 +1,23 @@
 // ❗️ DON'T TOUCH THESE 2 FUNCTIONs
 // Pre-made function that will fill the button with its number.
 // First button top left is called 1, last button bottom right is 9
+let player1 = true;
+let isGameOver = false;
+
 function fillButton(index, text) {
   // This function fills the button of the send index
   document.getElementById(index).innerHTML = text;
 }
 // pre-made a function. You can use this function to present an alert to say someone wins
-function winningAlert(winner) {
-  if(confirm(`Horraaay, ${winner} wins!`)){
-     // The code here will be exectued if you press on OK button that will pop on the window 
-  }
+function winningAlert(winner) {}
+if (confirm(`Horraaay, ${winner} wins!`)) {
+  // The code here will be exectued if you press on OK button that will pop on the window
 }
 
 // SAMPLE CODE: This code fills the 1st and 9th button with X and O initially
 // ❗️ Delete this code once you are done testing
-fillButton(1, "X");
-fillButton(9, "O");
+// fillButton(1, "X");
+// fillButton(9, "O");
 
 /**
  *
@@ -24,9 +26,53 @@ fillButton(9, "O");
  * Add your code here, since this is going to be your main function
  * That interacts with the UI
  */
+
 function clickButton(index) {
   console.log(`Button number ${index} is clicked`);
   // Your main code here.
+  const row1 = [1, 2, 3];
+  const row2 = [4, 5, 6];
+  const row3 = [7, 8, 9];
+  const col1 = [1, 4, 7];
+  const col2 = [2, 5, 8];
+  const col3 = [3, 6, 9];
+
+  if (isGameOver == false) {
+    if (
+      document.getElementById(index).innerHTML == "X" ||
+      document.getElementById(index).innerHTML == "O"
+    ) {
+      return;
+    }
+    player1 ? fillButton(index, "X") : fillButton(index, "O");
+    player1 = !player1;
+    if (
+      document.getElementById(row1[0]).innerHTML == "X" &&
+      document.getElementById(row1[1]).innerHTML == "X" &&
+      document.getElementById(row1[2]).innerHTML == "X"
+    ) {
+      console.log("X is winner");
+      return (isGameOver = true);
+    } else if (
+      document.getElementById(row2[0]).innerHTML == "X" &&
+      document.getElementById(row2[1]).innerHTML == "X" &&
+      document.getElementById(row2[2]).innerHTML == "X"
+    ) {
+      console.log("X is winner");
+      return (isGameOver = true);
+    } else if (
+      document.getElementById(row3[0]).innerHTML == "X" &&
+      document.getElementById(row3[1]).innerHTML == "X" &&
+      document.getElementById(row3[2]).innerHTML == "X"
+    ) {
+      console.log("X is winner");
+      return (isGameOver = true);
+    }
+  } else {
+    winningAlert("X");
+    console.log("GameOver");
+  }
+  // fillButton(index, "O");}
 }
 
 /**
