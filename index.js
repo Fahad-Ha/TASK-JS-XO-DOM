@@ -58,7 +58,7 @@ function clickButton(index) {
       document.getElementById(board[0][1]).innerHTML == "X" &&
       document.getElementById(board[0][2]).innerHTML == "X"
     ) {
-      return winningAlert("X");
+      winningAlert("X");
 
       isGameOver = true;
     } else if (
@@ -114,73 +114,81 @@ function clickButton(index) {
       document.getElementById(board[7][1]).innerHTML == "X" &&
       document.getElementById(board[7][2]).innerHTML == "X"
     ) {
-      isGameOver = true;
       winningAlert("X");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[6][0]).innerHTML == "O" &&
       document.getElementById(board[6][1]).innerHTML == "O" &&
       document.getElementById(board[6][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[1][0]).innerHTML == "O" &&
       document.getElementById(board[1][1]).innerHTML == "O" &&
       document.getElementById(board[1][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[2][0]).innerHTML == "O" &&
       document.getElementById(board[2][1]).innerHTML == "O" &&
       document.getElementById(board[2][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[3][0]).innerHTML == "O" &&
       document.getElementById(board[3][1]).innerHTML == "O" &&
       document.getElementById(board[3][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[4][0]).innerHTML == "O" &&
       document.getElementById(board[4][1]).innerHTML == "O" &&
       document.getElementById(board[4][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[5][0]).innerHTML == "O" &&
       document.getElementById(board[5][1]).innerHTML == "O" &&
       document.getElementById(board[5][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[6][0]).innerHTML == "O" &&
       document.getElementById(board[6][1]).innerHTML == "O" &&
       document.getElementById(board[6][2]).innerHTML == "O"
     ) {
       winner = "O";
-      isGameOver = true;
       winningAlert("O");
+
+      isGameOver = true;
     } else if (
       document.getElementById(board[7][0]).innerHTML == "O" &&
       document.getElementById(board[7][1]).innerHTML == "O" &&
       document.getElementById(board[7][2]).innerHTML == "O"
     ) {
       winner = "O";
+      winningAlert("O");
 
       isGameOver = true;
-      winningAlert("O");
     }
     // fillButton(index, "O");}
   }
